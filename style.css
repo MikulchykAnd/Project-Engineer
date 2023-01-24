@@ -1,0 +1,946 @@
+
+
+
+@font-face {
+    font-family: 'Red Hat Text', sans-serif;
+    src: url("assets/fonts/RedHatText-Regular.ttf");
+    font-weight: 500;
+    font-style: normal;
+ }
+ 
+ @font-face {
+    font-family: 'Aleo', sans-serif;
+    src: url("assets/fonts/Aleo-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+ }
+ 
+ @font-face {
+    font-family: 'Aleo', sans-serif;
+    src: url("assets/fonts/Aleo-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+ }
+ 
+ @font-face {
+    font-family: 'Aleo', sans-serif;
+    src: url("assets/fonts/Aleo-Italic.ttf");
+    font-weight: 700;
+    font-style: italic;
+ }
+ 
+ @font-face {
+    font-family: 'Aleo', sans-serif;
+    src: url("assets/fonts/Aleo-BoldItalic.ttf");
+    font-weight: 700;
+    font-style: italic;
+ }
+ h1 {
+    font-family: Aleo;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96px;
+    color: #000000;
+ }
+ 
+ h2 {
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #b61b1b;
+ }
+ 
+ h3 {
+    font-family: Aleo;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 0.2;
+    color: #0D606F;
+ }
+ 
+ h4 {
+    font-family: Aleo;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 0.2;
+    color: #A5A7AA;
+ }
+ 
+ p {
+    font-family: Aleo;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+ }
+ html, body{
+    width: 100%;
+    line-height: 1;
+    scroll-behavior: smooth;
+ }
+ [class*="__container"] {
+max-width: 1470px;
+margin: 0px auto;
+padding: 0px 15px
+ }
+ /*PC*/
+ @media(max-width: 1470px){
+   [class*="__container"]{
+      max-width: 970px;
+   }
+ }
+ /*Tablet*/
+ @media(max-width: 991.98px){
+   [class*="__container"]{
+      max-width: 750px;
+   }
+ }
+ @media(max-width: 991.98px) {
+   h3{
+      font-size:18px;
+   }}
+   
+   @media(max-width: 991.98px) {
+      h4{
+         font-size:12px;
+      }}
+   
+ /*Mobile*/
+ @media(max-width: 767.98px){
+   [class*="__container"]{
+      max-width: none;
+   }
+ }
+ .wrapper{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+ }
+ .main{
+   flex: 1 1 auto;
+ }
+ .header__menu{
+  flex: 1 1 auto;
+  
+ }
+ .header{
+   min-height: 120px;
+   background-color:rgb(221, 235, 246);
+   
+ }
+ @media(max-width: 767.98px) {
+ body._lock{
+  overflow: hidden;
+ }}
+
+ .header__content__wrapper{
+   display: flex;
+   justify-content:flex-start;
+   align-items: center;
+   max-width: 1350px;
+   min-height: 120px;
+   margin: auto;
+   gap: 5%;
+ }
+ @media(max-width: 991.98px){
+   .header__content__wrapper, .header{
+   min-height: 90px;
+ }}
+ .header__logo{
+   max-width: 80px;
+   max-height: 80px;
+   background:rgb(221, 235, 246);
+   
+
+ }
+ @media(max-width: 991.98px) {
+   .header__logo img{
+      width: 70%;
+      height: 70%;
+      
+   }}
+
+ .menu__list{
+   display: flex;
+   justify-content: space-between;
+   list-style: none;
+  
+   
+ }
+ .initials{
+   max-height: 120px;
+ }
+ .menu__link{
+   text-decoration: none;
+   font-family: Aleo;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.33;
+    color: #0D606F;
+   
+ }
+ @media(max-width: 991.98px) {
+   .menu__link{
+      font-size:14px;
+      color:#0D606F;
+      }}
+
+ @media(max-width: 767.98px) {
+   .menu__link{
+      font-size:16px;
+      color:#0D606F;
+      }}
+
+      @media(max-width: 767.98px) {
+         .menu__item{
+            margin: 0px 0px 10px 0px;
+            }} 
+
+ .menu__link:hover{
+   color: crimson;
+   transition: all 0.3s ease 0s;
+ }
+ /*Burger menu*/
+ .menu__icon{
+   position: relative;
+   flex: 0 0 30px;
+   height: 18px;
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+ }
+
+ .menu__icon::before,
+ .menu__icon::after{
+   content: "";
+   height: 2px;
+   background-color: #000000;
+ }
+ .menu__icon span{
+   height: 2px;
+   background-color: #000000;
+ }
+ @media(max-width: 767.98px){
+   .menu__icon{
+      display: flex;
+      margin-right: 10px;
+      cursor: pointer;
+      
+   }
+ }
+ .menu__icon._active span{
+   display: none;
+ }
+ .menu__icon._active::before{
+   transform: rotate(-45deg) ;
+   margin-top: 8px;
+   
+ }
+
+ .menu__icon._active::after{
+   transform: rotate(45deg);
+   margin-bottom: 8px;
+   
+ }
+
+ @media(max-width: 767.98px){
+   .menu__list{
+    position: fixed;
+      top: 0;
+      right: 0;
+      width: 30%;
+      background-color:#e8ecf2;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 15px 30px 15px;
+      transition: all 0.5s ease 0s;
+      transform: translate(0px,0px);
+      margin: 0px;
+   }}
+   
+   .menu__list._active{
+      transform: translate(0px, -110%);
+      position: absolute;
+      width: 50%;
+     
+    }
+    
+/*Section contacts*/
+.contacts{
+  max-width: 100%;
+  max-height: 630px;
+}
+.myphoto{
+  margin:auto
+}
+
+.contacts__wrapper{
+  display: flex;
+}
+.contacts_left h3{
+  text-align: center;
+}
+.contacts_left{
+  background-color: rgb(232, 234, 177);
+  border: 3px solid  #c2ccdb;
+}
+
+.contact__list{
+  text-decoration: none;
+  font-family: Aleo;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 1.2rem;
+   line-height: 1.8;
+   color: #0D606F;
+   padding-left: 20px;
+  
+}
+@media(max-width: 767.98px){
+  .contact__list{
+    font-size: 1rem;}}
+
+    @media(max-width: 767.98px){
+      .contacts__wrapper{
+        display: table;
+        
+      }}
+
+      @media(max-width: 767.98px){
+        .contacts_left{
+          display: flex;
+          max-width: 100%;
+        }}
+
+      @media(max-width: 767.98px){
+        .myphoto{
+          width: 100%;
+          height: 100%;
+        }}
+
+      @media(max-width: 767.98px){
+      .photo{
+       width: 100%;
+      height: 100%;
+      }}
+
+      @media(max-width: 767.98px){
+        .contacts_h3{
+          display: none;
+        }}
+      
+      @media(max-width: 767.98px){
+        .contact__list{
+          font-size: 14px;
+          margin: auto;
+        } }
+
+      
+        @media(max-width: 767.98px){
+          .plant{
+            max-height: 250px;
+          }     }
+        
+    .contacts_h3{
+    font-family: Aleo;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 0.2;
+    color: #0D606F;
+    }
+
+    .picture_right{
+      width: 100%;
+    }
+
+    .plant{
+      width: 100%;
+      height: 600px;
+    }
+
+    @media(max-width: 991.98px) {
+      .contacts_h3{
+        font-size: 24px;
+      }}
+
+      @media(max-width: 767.98px) {
+        .contacts_h3{
+          font-size: 20px;
+        }}
+
+        .specialization{
+          max-width: 100%;
+          max-height: 300px;
+          text-align: center;
+         
+        }
+        .specialization__h2{
+          font-size: 42px;
+        }
+        .specialization__h3{
+          font-size: 32px;
+        }
+
+
+        .specialization__container{
+          display: flex;
+          justify-content: space-between;
+          margin-top: 50px;
+        }
+        .factory{
+        height: 100px;
+        width: 120px;
+         background-image: url("assets/icons/Factory.jpg");
+         background-size: cover;
+         background-position: center;
+        }
+        
+        .warehouse{
+          height: 90px;
+          width: 100px;
+           background-image: url("assets/icons/Warehouse.png");
+           background-size: cover;
+           background-position: center;
+          }
+         .sportcenter{
+            height: 90px;
+            width: 100px;
+             background-image: url("assets/icons/gym.png");
+             background-size: cover;
+             background-position: center;
+            }
+            .autoservice{
+              height: 90px;
+              width: 100px;
+               background-image: url("assets/icons/autoservice.png");
+               background-size: cover;
+               background-position: center;
+              }
+              .buildings{
+                height: 100px;
+                width: 120px;
+                 background-image: url("assets/icons/building\ .png");
+                 background-size: cover;
+                 background-position: center;
+                }
+
+               .factory__h3,.warehouse__h3,
+               .sportcenter__h3,.autoservice__h3,
+               .buildings__h3
+               {font-size: 22px;
+               }
+               .factory__h3,.buildings__h3{
+                margin: auto;
+                margin-top: 10px;
+               }
+               @media(max-width: 991.98px) {
+                .factory,.buildings{
+                  height: 80px;
+                  width: 100px;}}
+              @media(max-width: 991.98px) {
+                .warehouse,.autoservice,.sportcenter{
+                  height: 70px;
+                  width: 80px;
+                }}
+                @media(max-width: 991.98px){
+                  .factory__h3,.warehouse__h3,
+               .sportcenter__h3,.autoservice__h3,
+               .buildings__h3
+               {font-size: 20px;
+                text-align: center;
+               }
+                }
+                @media(max-width: 991.98px){
+                  .specialization__h2{
+                    font-size: 30px;
+                  }
+                }
+                @media(max-width: 991.98px){
+                  .specialization__h3{
+                    font-size: 26px;
+                  }
+                }
+                @media(max-width: 767.98px){
+                .specialization__container{
+                  display: flex;
+                  justify-content: space-between;
+                  padding-bottom: 50px;
+                }}
+                @media(max-width: 767.98px){
+                  .specialization__wrapper{
+                    margin-top: -20px;
+                  }}
+
+                @media(max-width: 767.98px) {
+                  .factory__container,.buildings__container{
+                    height: 40px;
+                    width: 50px;
+                  padding-left: 5px;}}
+
+                    @media(max-width: 767.98px) {
+                      .factory,.buildings{
+                        height: 40px;
+                        width: 50px;
+                      }}
+
+                     @media(max-width: 767.98px) {
+                      .warehouse__container,.autoservice__container,.sportcenter__container{
+                         height: 35px;
+                         width: 40px;
+                         
+                          }}
+
+                @media(max-width: 767.98px) {
+                  .warehouse,.autoservice,.sportcenter{
+                    height: 35px;
+                    width: 40px;
+                
+                  }}
+                  @media(max-width: 767.98px){
+                    .factory__h3,
+                 .buildings__h3
+                 {display: none;
+                 }
+                  }
+                  @media(max-width: 767.98px){
+                  .warehouse__h3,
+                 .sportcenter__h3,.autoservice__h3{
+                  display: none;
+                 }}
+
+
+                  @media(max-width: 767.98px){
+                    .specialization__h2{
+                      font-size: 24px;
+                      line-height: 30px;
+                      padding-top: 10px;
+                     
+                    }
+                  }
+                  @media(max-width: 767.98px){
+                    .specialization__h3{
+                      font-size: 18px;
+                      
+                    }
+                  }
+                  .duty{
+                    max-width: 100%;
+                    max-height: 300px;
+                    text-align: center;
+                    background-color:#dde2ea;
+                    margin-top: 10px;
+                  }
+                  .duty__container{
+                    display: flex;
+                    justify-content: space-around;
+                    
+                  }
+                  .duty__item{
+                    font-family: Aleo;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 1.15;
+                    color: #0D606F;
+                    text-align: start;
+                    list-style-type:square;
+                    
+                    }
+                    
+                    .duty__h2{
+                      padding-top: 10px;
+                      margin: auto;
+                      margin-bottom: 10px;}
+
+                      @media(max-width: 991.98px){
+                        .duty__h2{
+                          font-size: 30px;
+                        }
+                      }
+                      @media(max-width: 991.98px){
+                        .duty__item{
+                          font-size: 20px;
+                        }}
+                        @media(max-width: 767.98px){
+                          .duty__h2{
+                            font-size:24px ;
+                          }}
+                        @media(max-width: 767.98px){
+                          .duty__item{
+                              font-size: 14px;
+                            }}
+                            @media(max-width: 767.98px){
+                              .duty__container{
+                                margin-top: -20px;
+                              }}
+                              .information{
+                                max-width: 100%;
+                                max-height: 300px;
+                                border: solid 3px #caced5;;
+                              }
+
+                              .information__container{
+                                display: flex;
+                                justify-content:flex-start;
+                                margin: 0px;
+                                padding: 0px;
+                                max-width: 100%;
+                                
+                                
+                              }
+                              .expirience__h2,.education__h2,
+                              .skills__h2,.english__h2{
+                                font-size: 24px;
+                                text-align: center;
+                              }
+                              .english__picture{
+                                background-image: url("assets/image/certificate_46.png");
+                                background-size:calc(70%);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                width: 100%;
+                                height: 65%;
+                                
+                              }
+                              .expirience{
+                                
+                                max-width: 25%;
+                              }
+                              .education{
+                                background-color:#dde2ea;
+                                max-width: 25%;
+                              }
+                              .skills{
+                                
+                                width: 25%;
+                              }
+                              .skills__list{
+                                padding-left: 70px;
+                              }
+                              .english{
+                                background-color:#dde2ea;
+                                width: 25%;
+                              }
+                              
+                              .expirience__item,.education__item,.skills__item{
+                                font-family: Aleo;
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 20px;
+                                line-height: 1.5;
+                                color: #0D606F;
+                                text-align: start;
+                                list-style-type:square;
+                                
+                                }
+                                @media(max-width: 991.98px){
+                                  .expirience__item,.education__item,.skills__item{
+                                    font-size: 16px;
+                                  }
+                                }
+                                @media(max-width: 991.98px){
+                                  .skills__list{
+                                    padding-left: 50px;
+                                  }}
+                                  @media(max-width: 991.98px){
+                                    .english__picture{
+                                      background-size:calc(65%);
+                                    }}
+
+                                    @media(max-width: 767.98px){
+                                      .expirience__item,.education__item,.skills__item{
+                                        font-size: 12px;
+                                      }}
+                                      @media(max-width: 767.98px){
+                                        .expirience__h2,.education__h2,
+                                        .skills__h2,.english__h2{
+                                          font-size: 16px;
+                                        line-height: 10px;}}
+                                          
+                                @media(max-width: 767.98px){
+                                  .expirience__list,.education__list,.skills__list{
+                                    padding-left: 15px;
+                                  }}
+                                  @media(max-width: 767.98px){
+                                    .english__picture{
+                                      background-size:calc(90%);
+                                      max-height: 100px;
+                                    }}
+                                    .projects{
+                                      max-width: 100%;
+                                      max-height: 100%;
+                                      text-align: center;
+                                      overflow: hidden;
+                                      background-color:#dde2ea;
+                                     
+                                    }
+                                    .projects__h2{
+                                      font-size: 42px;
+                                      
+                                    }
+                                    .project__h3{
+                                      font-size: 32px;
+                                    }
+
+                                    .projects__wrapper{
+                                      background-color:#dde2ea;
+                                      
+                                      
+                                    }
+                            
+                            
+                                    .projects__contain{
+                                      display: flex;
+                                      justify-content: flex-start;
+                                      margin: auto;
+                                      max-width: 85%;
+                                      height: 100%;
+                                      overflow: hidden;
+                                      position: relative;
+                                      
+                                      
+                                      
+                                    }
+                                    .slide{
+                                      width: 100%;
+                                      height: 100%;
+                                      
+                                    }
+                                    .project__one{
+                                      background-image: url("assets/image/Belavia3.PNG");
+                                      background-repeat: no-repeat;
+                                      background-size:contain;
+                                      width: 700px;
+                                      height: 700px;
+                                      margin: auto;
+                                    }
+
+                                    .project__h3{
+                                      font-family: Aleo;
+                                      font-style: normal;
+                                      font-weight: 400;
+                                      font-size: 30px;
+                                      line-height: 0.2;
+                                      color: #1c1c19;
+                                      margin-top: -40px;
+                                      
+                                      }
+
+                                    
+                                    
+                                    .project__two{
+                                      background-image: url("assets/image/Bate2.PNG");
+                                      background-repeat: no-repeat;
+                                      background-size:contain;
+                                      width: 700px;
+                                      height: 700px;
+                                      margin: auto;
+                                    }
+                                    
+                                    .project__three{
+                                      background-image: url("assets/image/Belaz3.PNG");
+                                      background-repeat: no-repeat;
+                                      background-size:contain;
+                                      width: 700px;
+                                      height: 700px;
+                                      margin: auto;
+                                      margin-top: 200px;
+                                    }
+
+                                    .project__h3__b{
+                                      font-family: Aleo;
+                                      font-style: normal;
+                                      font-weight: 400;
+                                      font-size: 30px;
+                                      line-height: 0.2;
+                                      color: #1c1c19;
+                                      margin-top: -250px;
+                                      
+                                      }
+                                    
+                                      .project__h3__c{
+                                        font-family: Aleo;
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 30px;
+                                        line-height: 0.2;
+                                        color: #1c1c19;
+                                        
+                                        
+                                        }
+                                    .project__four{
+                                      background-image: url("assets/image/Motorland3.PNG");
+                                      background-repeat: no-repeat;
+                                      background-size:contain;
+                                      width: 700px;
+                                      height: 700px;
+                                      margin: auto;
+                                    }
+                                    
+                                    .project__five{
+                                      background-image: url("assets/image/7holm1.PNG");
+                                      background-repeat: no-repeat;
+                                      background-size:contain;
+                                      width: 700px;
+                                      height: 700px;
+                                      margin: auto;
+                                      margin-top: 200px;
+                                    }
+                                    
+                                    .project__six{
+                                      background-image: url("assets/image/Bahco1.PNG");
+                                      background-repeat: no-repeat;
+                                      background-size:contain;
+                                      width: 700px;
+                                      height: 700px;
+                                      margin: auto;
+                                      
+                                      
+                                    }
+                                    
+                                    .project__seven{
+                                      background-image: url("assets/image/Brouki3.PNG");
+                                      background-repeat: no-repeat;
+                                      background-size:contain;
+                                      width: 700px;
+                                      height: 700px;
+                                      margin: auto;
+                                      
+                                    }
+                                    .line{
+                                      position: relative;
+                                      height: 700px;
+                                      overflow: hidden;
+                                      left: 0;
+                                      transition: all ease 1s;
+                                  
+                                    }
+                                    .btn__left, .btn__right{
+                                      border-radius: 20%;
+                                      background: rgb(249, 206, 230);
+                                      cursor: pointer;
+                                      outline: 0;
+                                      height: 20%;
+                                      margin-top: 30%;
+                                      
+                                      
+                                      
+                                    }
+                                  .transformAnimation{
+                                    transition: .4s all ease-in-out;
+                                  }
+
+                                  .btn__left{
+                                    transform: rotate(180deg);
+                                    
+                                  }
+                                  @media(max-width: 991.98px){
+                                    .projects__h2{
+                                      font-size: 30px;
+                                    }
+                                  }
+                                  @media(max-width: 991.98px){
+                                  .project__one,.project__two,.project__three,
+                                  .project__four,.project__five,.project__six,
+                                  .project__seven{
+                                    width: 520px;
+                                    height: 520px;
+                                  }}
+
+                                  @media(max-width: 991.98px){
+                                    .project__five,.project__three{
+                                      margin-top: 100px;
+                                      }}
+
+                                      @media(max-width: 991.98px){
+                                      .project__h3__b{
+                                        margin-top: -150px;}}
+                                      
+                                        @media(max-width: 991.98px){
+                                          .project__h3{
+                                            font-size: 24px;
+                                            
+                                          }}
+
+                                   @media(max-width: 991.98px){
+                                    .project__h3__c,.project__h3__b{
+                                      font-size: 24px;
+                                    }}
+
+                                    @media(max-width: 991.98px){
+                                      .project__h3__c{
+                                        line-height: 0;
+                                      }}
+
+            
+                                  .footer{
+                                    margin: auto;
+                                  }
+
+                                  @media(max-width: 767.98px){
+                                    .projects__h2{
+                                      font-size: 24px;
+                                    line-height: 10px;}}
+
+                                  @media(max-width: 767.98px){
+                                  .project__one,.project__two,.project__three,
+                                  .project__four,.project__five,.project__six,
+                                  .project__seven{
+                                    width: 250px;
+                                    height: 270px;
+                                  }}
+
+                                  @media(max-width: 767.98px){
+                                    .ar{
+                                      width: 12px;
+                                      height: 18px;
+                                      
+                                    }}
+                                  
+                                  @media(max-width: 767.98px){
+                                  .project__h3{
+                                    font-size: 16px;
+                                    line-height: 10px;
+                                  }}
+
+                                  @media(max-width: 767.98px){
+                                  .project__h3__b{
+                                    font-size: 14px;
+                                    padding-top: 60px;
+                                    
+                                  }}
+
+                                  @media(max-width: 767.98px){
+                                    .project__h3__c{
+                                      font-size: 14px;
+                                      
+                                    }}
+
+                                  @media(max-width: 767.98px){
+                                  .project__five,.project__three{
+                                    margin-top: 50px;
+                                  }}
+
+                                  .footer{
+                                    min-height: 60px;
+                                    background-image: url("assets/image/ornament.png");
+                                    background-size:contain;
+                                  }
+
+
+
+
+                
+
+                
+
